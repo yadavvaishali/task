@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <Button
+                android:id="@+id/submit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                 android:layout_alignParentBottom="true"
+                android:background="@drawable/buttonshap"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:orientation="vertical"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:cacheColorHint="#00000000"
+        android:overScrollMode="never"
+        android:fillViewport="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner1"
+
+                    />
+
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:inputType="text" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#6A6969"
+                    android:text="Property Type"/>
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#6A6969"
+                    android:textStyle="bold"
+                    android:text="Location"/>
+
+                <EditText
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rishikesh"
+                    android:layout_marginTop="2dp"
+                    android:inputType="text"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:textColor="#6A6969"
+                        android:text="Dimensions"/>
+
+
+                <EditText
+                    android:id="@+id/plotdimension"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="24x10"
+                    android:layout_marginTop="2dp"
+                    android:inputType="text"
+
+                    />
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Sq Yrd Area Register"
+                    android:textStyle="bold"
+                    android:textColor="#6A6969"
+                    android:textSize="15dp" />
+
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sqr"
+                    android:layout_marginTop="2dp"
+                    android:inputType="number"
+                    android:hint="100"/>
+
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#6A6969"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
+                        android:text="Sq Yrd Area(On-Site/Mauka)"/>
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/onsite"
+                        android:inputType="number"
+                        android:hint="114"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#6A6969"
+                        android:text="Sq Ft Area(Carpet Area)"/>
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/carpet"
+                        android:inputType="number"
+                        android:hint="NA"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#6A6969"
+                        android:textStyle="bold"
+                        android:text="Sq Ft Area(Super Area)"/>
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:inputType="number"
+                        android:id="@+id/superarea"
+                        android:hint="NA"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#6A6969"
+                        android:textStyle="bold"
+                        android:text="Cost Per Sqyrd/Sqft"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:inputType="number"
+                        android:id="@+id/cost"
+                        android:hint="220"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#6A6969"
+                        android:textStyle="bold"
+                        android:text="Total Cost(Client Demand)Start"/>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/start"
+                        android:inputType="number"
+                        android:hint="22000"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#6A6969"
+                        android:textStyle="bold"
+                        android:text="Total Cost(Client Demand)Final"/>
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:inputType="number"
+                        android:id="@+id/finalcost"
+                        android:hint="114"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#6A6969"
+                        android:textStyle="bold"
+                        android:text="Other Details"/>
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:inputType="textMultiLine"
+                        android:id="@+id/otherdetails"
+                        android:hint="100"/>
+
+                </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+</RelativeLayout>

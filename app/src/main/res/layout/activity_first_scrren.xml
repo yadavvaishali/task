@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#ffffff"
+    tools:context=".FirstScrren">
+
+    <Button
+        android:id="@+id/addproperty"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/buttonshap2"
+        android:drawableLeft="@drawable/add"
+        android:paddingLeft="20dp"
+        android:text="@string/add"
+        android:textColor="#6A6969"
+        android:textAllCaps="false"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/allproperty"
+
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttonshap"
+        android:clickable="false"
+        android:textAllCaps="false"
+        android:paddingLeft="20dp"
+        android:drawableLeft="@drawable/vision"
+        android:text="@string/show"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+
+        />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Property_Database</string>
+    <string name="add">Add Property</string>
+    <string name="show">Show Property</string>
+</resources>

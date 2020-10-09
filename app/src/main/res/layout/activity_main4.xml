@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:background="@drawable/circular"
+            android:drawableLeft="@drawable/user"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="45dp"
+            android:layout_width = "150dp"
+            android:layout_height = "150dp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_below="@+id/header"
+        android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:id="@+id/scrollview2"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:cacheColorHint="#00000000"
+        android:overScrollMode="never"
+    tools:context=".MainActivity4">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="5dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/sdp2"
+    android:textAllCaps="true"
+    android:text="SELLER"/>
+
+
+<TextView
+    android:id="@+id/name2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:hint="Name"
+    android:layout_marginLeft="20dp"
+    android:inputType="text" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+
+
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="PROPERTY TYPE"
+                android:textColor="#6A6969"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:id="@+id/propertytype2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="PROPERTY TYPE"
+                android:textColor="#6A6969"
+                android:textStyle="bold"
+                android:textSize="15dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                android:background="#E3E2E2"/>
+
+        </LinearLayout>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+<TextView
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+    android:text="LOCATION"/>
+
+<TextView
+    android:id="@+id/location2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:hint="RISHIKESH"
+    android:inputType="text"
+    />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+</LinearLayout>
+
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+<TextView
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+    android:text="DIMENTIONS"/>
+
+<TextView
+    android:id="@+id/plotdimension2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:hint="24x10"
+    android:inputType="text" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+</LinearLayout>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:text="SQ YRD AREA REGISTER"
+    android:textColor="#6A6969"
+    android:textSize="15dp" />
+
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/sqr2"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:layout_marginLeft="20dp"
+    android:hint="NA"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+    android:text="SQ YRD AREA (ON-SITE/MAUKA)"/>
+
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/onsite2"
+    android:hint="NA"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+    android:text="SQ FT AREA (CARPET AREA)"/>
+
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:id="@+id/carpet2"
+    android:hint="NA"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+    android:text="SQ FT AREA (SUPER AREA)"/>
+
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/superarea2"
+    android:hint="NA"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+
+    android:text="COST PER SQYRD/SQFT"/>
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cost2"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:layout_marginLeft="20dp"
+    android:hint="NA"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+
+    android:text="TOTAL COST(CLIENT DEMAND)START"/>
+
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/start2"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:layout_marginLeft="20dp"
+    android:hint="NA"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+</LinearLayout>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+
+    android:text="TOTAL COST(CLIENT DEMAND)FINAL"/>
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:layout_marginLeft="20dp"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:id="@+id/finalcost2"
+    android:hint="NA"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:background="#E3E2E2"/>
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+    android:layout_marginBottom="5dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#6A6969"
+    android:textSize="15dp"
+    android:layout_marginLeft="20dp"
+
+    android:text="OTHER DETAILS"/>
+
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:textColor="#6A6969"
+    android:textStyle="bold"
+    android:id="@+id/other2"
+    android:hint="NA"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
+        android:background="#E3E2E2"/>
+
+</LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
