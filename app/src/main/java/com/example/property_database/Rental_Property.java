@@ -7,12 +7,14 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -23,11 +25,12 @@ public class Rental_Property extends AppCompatActivity implements AdapterView.On
     ArrayAdapter<String> dataAdapterptrent,dataAdaptertrent;
     Button submit_rent;
     String ownerNamevalue,location_rentvalue,sqr_rentvalue,carpet_rentvalue,super_rentvalue,sqft_rentvalue,rentvalue,other_details_rentvalue,spinner_categoryvalue,spinner_ptypvalue;
-
+    private DBHelper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rental__property);
+        db=new DBHelper(Rental_Property.this);
         ActionBar actionBar;
         actionBar = getSupportActionBar();
         ColorDrawable colorDrawable
@@ -43,7 +46,7 @@ public class Rental_Property extends AppCompatActivity implements AdapterView.On
         sqft_rent=(EditText)findViewById(R.id.sqft_rent);
         rent=(EditText)findViewById(R.id.rent);
 
-        other_details_rent=(EditText)findViewById(R.id.otherdetails_real);
+        other_details_rent=(EditText)findViewById(R.id.otherdetails_rent);
         submit_rent=(Button)findViewById(R.id.submit_rent);
 
         pjtyperent = new ArrayList<String>();
@@ -70,7 +73,7 @@ public class Rental_Property extends AppCompatActivity implements AdapterView.On
             public void onClick(View view) {
                 ownerNamevalue=ownerName.getText().toString();
                 location_rentvalue=location_rent.getText().toString();
-                        sqr_rentvalue=sqft_rent.getText().toString();
+                        sqr_rentvalue=sqr_rent.getText().toString();
                         carpet_rentvalue=carpet_rent.getText().toString();
                         super_rentvalue=super_rent.getText().toString();
                         sqft_rentvalue=sqft_rent.getText().toString();
@@ -79,8 +82,32 @@ public class Rental_Property extends AppCompatActivity implements AdapterView.On
                         spinner_categoryvalue=spinner_category.getSelectedItem().toString();
                         spinner_ptypvalue=spinner_ptyp.getSelectedItem().toString();
 
-                Intent i=new Intent(getApplicationContext(),FirstScrren.class);
+                Property property=new Property();
+                property.setOwnerName(ownerNamevalue);
+                property.setLocation_rent(location_rentvalue);
+                property.setCarpet_rent(carpet_rentvalue);
+                property.setSuper_rent(super_rentvalue);
+                property.setSqft_rent(sqft_rentvalue);
+                property.setRent(rentvalue);
+                property.setOther_details_rent(other_details_rentvalue);
+                property.setSpinner_category(spinner_categoryvalue);
+                property.setSpinner_ptyp(spinner_ptypvalue);
+                Toast.makeText(Rental_Property.this, property.toString(), Toast.LENGTH_LONG).show();
+
+
+                db.insertRent(property);
+                Toast.makeText(Rental_Property.this, "Data submitted", Toast.LENGTH_SHORT).show();
+                Intent i=new Intent(Rental_Property.this,FirstScrren.class);
                 startActivity(i);
+                ownerName.setText("");
+                        location_rent.setText("");
+                        sqr_rent.setText("");
+                        carpet_rent.setText("");
+                        super_rent.setText("");
+                        sqft_rent.setText("");
+                        rent.setText("");
+                        other_details_rent.setText("");
+
             }
         });
     }

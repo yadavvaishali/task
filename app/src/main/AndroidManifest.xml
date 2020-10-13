@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Show_Rental"></activity>
+        <activity android:name=".Rent_recycle"></activity>
+        <activity android:name=".Recycle_realestate" />
+        <activity android:name=".Show_Rental" />
         <activity android:name=".Show_Realestate" />
         <activity android:name=".ShowAllFields" />
         <activity android:name=".Rental_Property" />

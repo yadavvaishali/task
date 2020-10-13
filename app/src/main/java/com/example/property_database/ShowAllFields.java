@@ -36,14 +36,14 @@ public class ShowAllFields extends AppCompatActivity {
         realestate_show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),Show_property.class);
+                Intent i=new Intent(getApplicationContext(),Recycle_realestate.class);
                 startActivity(i);
             }
         });
         rental_show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),Show_property.class);
+                Intent i=new Intent(getApplicationContext(),Rent_recycle.class);
                 startActivity(i);
             }
         });

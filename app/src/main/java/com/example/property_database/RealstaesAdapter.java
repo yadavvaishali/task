@@ -1,4 +1,5 @@
 package com.example.property_database;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -6,30 +7,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static androidx.core.content.ContextCompat.startActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder>implements Filterable {
+public class RealstaesAdapter extends RecyclerView.Adapter<RealstaesAdapter.RecyclerViewHolder> implements Filterable {
     private static List<Property> dataModelList;
     private List<Property> exampleListFull;
     Context context;
-
-
-
-    @Override
-    public Filter getFilter() {
-        return exampleFilter;
-    }
-
     static class RecyclerViewHolder extends RecyclerView.ViewHolder {
         TextView tvFirstName;
         TextView tvContactNo;
@@ -41,8 +32,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View view) {
                     int itemPosition = getLayoutPosition();
-                    Intent intent = new Intent (view.getContext(), MainActivity4.class);
-                    String itemid= dataModelList.get(itemPosition).getId();
+                    Intent intent = new Intent (view.getContext(), Show_Realestate.class);
+                    String itemid= dataModelList.get(itemPosition).getRealid();
                     intent.putExtra("itemid",itemid );
                     view.getContext().startActivity(intent);
                 }
@@ -54,14 +45,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    public RecyclerViewAdapter(Context context, List<Property> dataModelList) {
+    public RealstaesAdapter(Context context, List<Property> dataModelList) {
         this.context=context;
         this.dataModelList = dataModelList;
         exampleListFull=new ArrayList<>(dataModelList);
 
     }
-
-    @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         RecyclerViewHolder viewHolder;
@@ -70,15 +59,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return viewHolder;
     }
 
+
+
+
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
-       Property property=dataModelList.get(position);
-        holder.tvFirstName.setText(property.getName());
-        holder.tvContactNo.setText(property.getLocation());
-//        holder.id.setText(property.getId());
-
+        Property property=dataModelList.get(position);
+        holder.tvFirstName.setText(property.getReal_Name());
+        holder.tvContactNo.setText(property.getLocation_real());
     }
-
     @Override
     public long getItemId(int position) {
         return super.getItemId(position);
@@ -89,6 +78,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return dataModelList.size();
     }
 
+    @Override
+    public Filter getFilter() {
+        return exampleFilter;    }
     private Filter exampleFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
@@ -98,7 +90,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
                 for (Property item : exampleListFull) {
-                    if (item.getLocation().toLowerCase().contains(filterPattern)) {
+                    if (item.getLocation_real().toLowerCase().contains(filterPattern)) {
                         filteredList.add(item);
                     }
                 }
