@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                     Toast.LENGTH_LONG).show();
         }
             else{
-                    if (spinner2.getSelectedItem().toString().equals("HOUSE")){
+                    if (spinner2.getSelectedItem().toString().equals("House")){
                         dimension=spinner3.getSelectedItem().toString();
 
                     }
@@ -182,20 +182,16 @@ else
 
 
             final boolean house;
-        if (spinner2.getSelectedItem().toString().equals("HOUSE")){
+        if (spinner2.getSelectedItem().toString().equals("House")){
             house = true;
            plotdimension.setVisibility(View.GONE);
            plotdimension.setText("0");
            spinner3.setVisibility(View.VISIBLE);
-
-
-
-
         }
 
         else { house = false;
             spinner3.setVisibility(View.GONE);
-            spinner3.setAdapter(dataAdapter3);
+
             plotdimension.setVisibility(View.VISIBLE);
 
 

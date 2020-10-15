@@ -1,4 +1,5 @@
 package com.example.property_database;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
+    Context context;
 
     public static final String DATABASE_NAME = "MyDBNamenew1.db";
     public static final String CONTACTS_TABLE_NAME = "mycontacts1";
@@ -171,10 +173,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public List<Property> getAllCotacts() {
         List<Property> get_propertylist=new ArrayList<>();
+
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor =  db.rawQuery( "select * from mycontacts1", null );
         cursor.moveToFirst();
-
 
         while(cursor.isAfterLast() == false){
             Property property=new Property();
@@ -197,8 +199,10 @@ public class DBHelper extends SQLiteOpenHelper {
             get_propertylist.add(property);
 
             cursor.moveToNext();
-
         }
+
+
+
         return get_propertylist;
 
     }
@@ -207,6 +211,7 @@ public class DBHelper extends SQLiteOpenHelper {
         List<Property> get_propertylist=new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor =  db.rawQuery( "SELECT * FROM " + Rental_TABLE_NAME, null );
+
         cursor.moveToFirst();
 
 
@@ -329,7 +334,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-            Log.e("name",""+property.getName());
             get_propertylist.add(property);
 
             cursor.moveToNext();
@@ -374,5 +378,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return get_propertylist;
 
     }
+
+
 
 }

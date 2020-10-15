@@ -125,7 +125,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="15dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="6dp"
                         android:textStyle="bold"
                         android:textColor="#6A6969"
                         android:text="Dimensions"/>
@@ -145,7 +145,8 @@
                     android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"/>
+                    android:layout_marginTop="8dp"
+                   />
 
             </LinearLayout>
             <LinearLayout

@@ -47,6 +47,7 @@ public class Recycle_realestate extends AppCompatActivity {
         inflater.inflate(R.menu.example_menu, menu);
         MenuItem searchViewItem = menu.findItem(R.id.app_bar_search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchViewItem);
+        searchView.setQueryHint("find by location");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

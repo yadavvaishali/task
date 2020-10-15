@@ -43,8 +43,7 @@ public class Show_property extends AppCompatActivity {
         DBHelper db = new DBHelper(this);
         ActionBar actionBar;
         actionBar = getSupportActionBar();
-        ColorDrawable colorDrawable
-                = new ColorDrawable(Color.parseColor("#0909D9"));
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#0909D9"));
         actionBar.setBackgroundDrawable(colorDrawable);
         db.getAllCotacts();
        recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
@@ -53,24 +52,38 @@ public class Show_property extends AppCompatActivity {
         recyclerViewAdapter=new RecyclerViewAdapter(Show_property.this,db.getAllCotacts());
         recyclerView.setAdapter(recyclerViewAdapter);
         recyclerViewAdapter.notifyDataSetChanged();
-
     }
-
 
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
     MenuInflater inflater = getMenuInflater();
     inflater.inflate(R.menu.example_menu, menu);
     MenuItem searchViewItem = menu.findItem(R.id.app_bar_search);
-    final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchViewItem);
+    final SearchView searchView = (SearchView) searchViewItem.getActionView();
+    searchView.setQueryHint("find by location");
+
+    MenuItemCompat.setOnActionExpandListener(searchViewItem, new MenuItemCompat.OnActionExpandListener() {
+        @Override
+        public boolean onMenuItemActionExpand(MenuItem item) {
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.LTGRAY));
+            }
+            return true;
+        }
+        @Override
+        public boolean onMenuItemActionCollapse(MenuItem item) {
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+            }
+            return true;
+        }
+    });
+
     searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
         @Override
         public boolean onQueryTextSubmit(String query) {
             searchView.clearFocus();
-
-
             return false;
-
         }
 
         @Override
